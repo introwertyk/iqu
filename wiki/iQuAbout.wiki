@@ -2,7 +2,7 @@
 <wiki:toc max_depth="1" />
 
 = Introduction =
-iQueue is processing engine for MS AD(DS) and LDAP attributes management. It's an extension to iMDirectory project.
+iQu is processing engine for MS AD(DS) and LDAP attributes management. It's an extension to iMDirectory project.
 
 
 = Related Projects =
