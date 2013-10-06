@@ -9,7 +9,6 @@ iQueue is processing engine for MS AD(DS) and LDAP attributes management. It's a
  * [https://code.google.com/p/imdirectory/ iMDirectory Project]
  * [https://code.google.com/p/icor3/ iCOR3 Project]
  * [https://code.google.com/p/iauthx/ iAuthX Project]
- * [https://code.google.com/p/ipush/ iPush Project]
 
 =Use Cases - Examples=
 ==Migrate or merge AD DS environments==
