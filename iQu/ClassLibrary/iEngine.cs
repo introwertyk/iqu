@@ -10,7 +10,7 @@ namespace iQu
 	/// <summary>
 	/// Main iQu class. Initiates global update process.
 	/// </summary>
-	public class iEngine
+	public class iEngine : IDisposable
 	{
 		#region Properties
 		protected EventLog oEventLog;
@@ -29,6 +29,30 @@ namespace iQu
 			this.bDisposed = false;
 			this.oEventLog = new System.Diagnostics.EventLog("Application", ".", System.Reflection.Assembly.GetExecutingAssembly().GetName().Name);
 			this.SetConfiguration();
+		}
+		#endregion
+
+		#region Public Methods
+		/// <summary>
+		/// Starts processing queue.
+		/// </summary>
+		public void Start()
+		{
+			try
+			{
+				using (Sql oSql = new Sql(ConfigurationManager.ConnectionStrings["iQu"].ConnectionString))
+				{
+					foreach (Dictionary<string, object> oConnRes in oSql.RetrieveData("EXEC spGetTransactionsToWorker"))
+					{
+
+					}
+				}
+ 
+			}
+			catch (Exception eX)
+			{
+				this.oEventLog.WriteEntry(String.Format("{0}::{1}", new StackFrame(0, true).GetMethod().Name, eX.Message), EventLogEntryType.Error, 3060);
+			}
 		}
 		#endregion
 
@@ -87,6 +111,11 @@ namespace iQu
 				throw new Exception(string.Format("{0}::{1}", new StackFrame(0, true).GetMethod().Name, eX.Message));
 			}
 		}
+
+		/// <summary>
+		/// Start generic worker for non-hashed transactions
+		/// </summary>
+		private 
 		#endregion
 
 		#region IDisposable Members
