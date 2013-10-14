@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iQu.iEngineConfiguration
+
+namespace iQu
 {
-	class Attributes
+	class Program
 	{
+		static void Main(string[] args)
+		{
+			iQu.iEngine Engine = new iEngine();
+			
+		}
 	}
 }
