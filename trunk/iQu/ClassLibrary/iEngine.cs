@@ -231,6 +231,8 @@ AND
 this.Configuration.Classes[iObjectClassID].TableContext,
 iObjectClassID,
 ObjectID);
+
+					oSql.RetrieveData(SqlQuery);
 				}
 
 			}
@@ -239,6 +241,7 @@ ObjectID);
 				throw new Exception(string.Format("{0}::{1}", new StackFrame(0, true).GetMethod().Name, eX.Message));
 			}
 		}
+
 		#endregion
 
 		#region IDisposable Members
