@@ -50,6 +50,15 @@
     <Compile Include="..\..\iCOR3\ClassLibrary\ClassLibrary\iSqlDatabase\Sql.cs">
       <Link>iSqlDatabase\Sql.cs</Link>
     </Compile>
+    <Compile Include="..\..\iMDirectory\ClassLibrary\iEngineConfiguration\Class.cs">
+      <Link>iEngineConfiguration\Class.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iMDirectory\ClassLibrary\iEngineConfiguration\Connector.cs">
+      <Link>iEngineConfiguration\Connector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iMDirectory\ClassLibrary\iEngineConfiguration\Linking.cs">
+      <Link>iEngineConfiguration\Linking.cs</Link>
+    </Compile>
     <Compile Include="iEngine.cs" />
     <Compile Include="iEngineConfiguration\Attribute.cs" />
     <Compile Include="iEngineConfiguration\Configuration.cs" />
